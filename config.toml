@@ -1,5 +1,5 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://example.org"
+languageCode = 'en-us' #博客使用的语言
+title = 'byuN is the best' #博客的标题 
 theme = "ananke"
 publishDir = "docs"
