@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on byuN is the best</title>
+    <link>https://wzskqjh.com/post/</link>
+    <description>Recent content in Posts on byuN is the best</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Jun 2022 12:45:44 +0800</lastBuildDate><atom:link href="https://wzskqjh.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Requirement</title>
+      <link>https://wzskqjh.com/post/requirement/</link>
+      <pubDate>Sun, 26 Jun 2022 12:45:44 +0800</pubDate>
+      
+      <guid>https://wzskqjh.com/post/requirement/</guid>
+      <description>absl-py==1.0.0 alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work anaconda-client==1.7.2 anaconda-navigator==2.0.3 anaconda-project @ file:///tmp/build/80754af9/anaconda-project_1610472525955/work anyio @ file:///C:/ci/anyio_1620153418380/work/dist appdirs==1.4.4 argh==0.26.2 argon2-cffi @ file:///C:/ci/argon2-cffi_1613037959010/work arrow==0.13.1 ase==3.22.1 asn1crypto @ file:///tmp/build/80754af9/asn1crypto_1596577642040/work astroid @ file:///C:/ci/astroid_1613501047216/work astropy @ file:///C:/ci/astropy_1617745647203/work astunparse==1.6.3 async-generator @ file:///home/ktietz/src/ci/async_generator_1611927993394/work atomicwrites==1.4.0 attrs @ file:///tmp/build/80754af9/attrs_1604765588209/work autopep8 @ file:///tmp/build/80754af9/autopep8_1615918855173/work Babel @ file:///tmp/build/80754af9/babel_1607110387436/work backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work backports.functools-lru-cache @ file:///tmp/build/80754af9/backports.functools_lru_cache_1618170165463/work backports.shutil-get-terminal-size @ file:///tmp/build/80754af9/backports.shutil_get_terminal_size_1608222128777/work backports.tempfile @ file:///home/linux1/recipes/ci/backports.tempfile_1610991236607/work backports.weakref==1.0.post1 bcrypt @ file:///C:/ci/bcrypt_1597936263757/work beautifulsoup4 @ file:///home/linux1/recipes/ci/beautifulsoup4_1610988766420/work bitarray @ file:///C:/ci/bitarray_1618435038389/work bkcharts==0.2 black==19.10b0 bleach @ file:///tmp/build/80754af9/bleach_1612211392645/work bokeh @ file:///C:/ci/bokeh_1617827550560/work boto==2.</description>
+    </item>
+    
+  </channel>
+</rss>
