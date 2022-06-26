@@ -6,23 +6,23 @@
     <description>Recent content in Posts on byuN is the best</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jun 2022 12:52:11 +0800</lastBuildDate><atom:link href="https://wzskqjh.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Jun 2022 19:13:20 +0800</lastBuildDate><atom:link href="https://wzskqjh.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Requirement</title>
-      <link>https://wzskqjh.com/posts/requirement/</link>
-      <pubDate>Sun, 26 Jun 2022 12:52:11 +0800</pubDate>
+      <title>At_All_First</title>
+      <link>https://wzskqjh.com/posts/at_first/</link>
+      <pubDate>Sun, 26 Jun 2022 19:13:20 +0800</pubDate>
       
-      <guid>https://wzskqjh.com/posts/requirement/</guid>
-      <description>absl-py==1.0.0 alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work anaconda-client==1.7.2 anaconda-navigator==2.0.3 anaconda-project @ file:///tmp/build/80754af9/anaconda-project_1610472525955/work anyio @ file:///C:/ci/anyio_1620153418380/work/dist appdirs==1.4.4 argh==0.26.2 argon2-cffi @ file:///C:/ci/argon2-cffi_1613037959010/work arrow==0.13.1 ase==3.22.1 asn1crypto @ file:///tmp/build/80754af9/asn1crypto_1596577642040/work astroid @ file:///C:/ci/astroid_1613501047216/work astropy @ file:///C:/ci/astropy_1617745647203/work astunparse==1.6.3 async-generator @ file:///home/ktietz/src/ci/async_generator_1611927993394/work atomicwrites==1.4.0 attrs @ file:///tmp/build/80754af9/attrs_1604765588209/work autopep8 @ file:///tmp/build/80754af9/autopep8_1615918855173/work Babel @ file:///tmp/build/80754af9/babel_1607110387436/work backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work backports.functools-lru-cache @ file:///tmp/build/80754af9/backports.functools_lru_cache_1618170165463/work backports.shutil-get-terminal-size @ file:///tmp/build/80754af9/backports.shutil_get_terminal_size_1608222128777/work backports.tempfile @ file:///home/linux1/recipes/ci/backports.tempfile_1610991236607/work backports.weakref==1.0.post1 bcrypt @ file:///C:/ci/bcrypt_1597936263757/work beautifulsoup4 @ file:///home/linux1/recipes/ci/beautifulsoup4_1610988766420/work bitarray @ file:///C:/ci/bitarray_1618435038389/work bkcharts==0.2 black==19.10b0 bleach @ file:///tmp/build/80754af9/bleach_1612211392645/work bokeh @ file:///C:/ci/bokeh_1617827550560/work boto==2.</description>
-    </item>
-    
-    <item>
-      <title>First</title>
-      <link>https://wzskqjh.com/posts/first/</link>
-      <pubDate>Fri, 24 Jun 2022 16:12:40 +0800</pubDate>
-      
-      <guid>https://wzskqjh.com/posts/first/</guid>
-      <description>bsl-py==1.0.0 alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work anaconda-client==1.7.2 anaconda-navigator==2.0.3 anaconda-project @ file:///tmp/build/80754af9/anaconda-project_1610472525955/work anyio @ file:///C:/ci/anyio_1620153418380/work/dist appdirs==1.4.4 argh==0.26.2 argon2-cffi @ file:///C:/ci/argon2-cffi_1613037959010/work arrow==0.13.1 ase==3.22.1 asn1crypto @ file:///tmp/build/80754af9/asn1crypto_1596577642040/work astroid @ file:///C:/ci/astroid_1613501047216/work astropy @ file:///C:/ci/astropy_1617745647203/work astunparse==1.6.3 async-generator @ file:///home/ktietz/src/ci/async_generator_1611927993394/work atomicwrites==1.4.0 attrs @ file:///tmp/build/80754af9/attrs_1604765588209/work autopep8 @ file:///tmp/build/80754af9/autopep8_1615918855173/work Babel @ file:///tmp/build/80754af9/babel_1607110387436/work backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work backports.functools-lru-cache @ file:///tmp/build/80754af9/backports.functools_lru_cache_1618170165463/work backports.shutil-get-terminal-size @ file:///tmp/build/80754af9/backports.shutil_get_terminal_size_1608222128777/work backports.tempfile @ file:///home/linux1/recipes/ci/backports.tempfile_1610991236607/work backports.weakref==1.0.post1 bcrypt @ file:///C:/ci/bcrypt_1597936263757/work beautifulsoup4 @ file:///home/linux1/recipes/ci/beautifulsoup4_1610988766420/work bitarray @ file:///C:/ci/bitarray_1618435038389/work bkcharts==0.2 black==19.10b0 bleach @ file:///tmp/build/80754af9/bleach_1612211392645/work bokeh @ file:///C:/ci/bokeh_1617827550560/work boto==2.</description>
+      <guid>https://wzskqjh.com/posts/at_first/</guid>
+      <description>写给浏览的读者 在最开始搭建这个简陋的博客时，我给其的定位就是生活博客。是的，我不想仅仅在上面更新我的专业技术，从一方面想，无论我的角度再怎么新奇，依然能在其他人的博客上发现相同的，也就是&amp;quot;烂大街&amp;quot;了；另一方面呢，用一句俗话说：&amp;ldquo;会说话就多说点&amp;rdquo;，除了学习，有太多事能津津乐道了，我想把我天马行空的想法都记录下来。
+与我关系最近的博客网站就是CSDN，我在上面也堪堪发布过三篇博客，本来也会有很多的，后来我发现CSDN不能直接移植md的文件，让我很头疼，后来也就没更新了。我是个特别喜欢写东西的人，如果该博客的更新已经停止了超过三个月，有可能是我出了意外已经不在人世了。
+我想过记录博客会发生的一些问题，最重要的还是回到了技术类博客上：在技术的理解与使用上会存在争议(生活上的争议就需要互相尊重，我相信人都是秉承这个原则才会前行)，所以我会尽可能的把我要分享的技术以我当时学习的思考角度与解决方法还原，不止一次我发现，我学过的东西后来又重新忘记，然后又去查相同的解决方案，实在是在麻烦了。为了避免遗忘，我就把它们都仍在博客上，反正也不会过期。(有些问题会很幼稚)
+看到这里，可能会感觉思路不清，我表达的有些模糊，现在我在着手写这篇博客的时间是：2022/6/26，20:00，成都今天下了一天的雨，没什么准备，就是突然想把第一篇博客写的有意义一些，但又没有构建好的结构，东一句西一句的把断断续续的想法记录下来。
+第一个长远目标的话就是把博客完善到完美。
+写给自己 现在我正处在大二到大三的暑假期，因为大运会，嗯，一个很长很长的假期。
+总是想了很多未来的事情，在以前被说不考虑未来，现在看得远了发现更遥不可及，挺难的。
+我马上就要回家了，在成都呆了快三个月的网课加假期生活，无论是面对明年的考研，还是生活感情上，我能拿出的勇气都太少了，真诚还远远不够。说的好听点叫情感丰富，难听点就是多愁伤感，真不知道是好事还是坏事。现在应该是我目前的一生中最迷茫的时刻，对学业、对家人、对朋友(没有恋人太可惜了)，我一击击思想重拳都砸到了棉花上一般，我内心只剩下踌躇。等一帆风顺的回家后，我会一扫之前的颓势，像是小说爽文中的男主一样，从家乡获得了无可比拟的力量&amp;mdash;-源于我的家人跟朋友，可能是家给我的信心吧。
+以前总以为，人生最美好的是相遇，现在我慢慢觉得其实难得的是重逢。如果下次相逢，我希望你别来无恙。
+搞笑男当多了，以后不当了。</description>
     </item>
     
   </channel>
