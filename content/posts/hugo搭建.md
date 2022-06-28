@@ -1,0 +1,118 @@
+# 前言
+
+本片博客以配置文件的编辑为主，针对于有一定编程基础并且想个性化个人搭建博客的开发者。
+
+本篇博客使用**hugo**作为搭建博客的工具，部署到Github上
+
+实际上，搭建个人博客的过程并不轻松(如果想搞清楚流程)，并没有网上的三五分钟就轻松入门那么简单。
+
+# 配置文件
+
+一般来说，配置文件分为两种：
+
+- toml：<变量名> = 值
+- yaml：<变量名>：值
+
+仅在内容的编辑上存在差异，没有优劣之分(以我目前的知识储备来看)。
+
+我使用的是toml的编辑格式，下后面的内容中会依照[官方文档](https://gohugo.io/getting-started/configuration/)对一些配置进行说明。
+
+**我的hugo根目录为：D:\HugoDir\byungogo**
+
+-----
+
+## 初始配置
+
+![image-20220624173351570](../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624173351570.png)
+
+----
+
+为什么不选择网上经常提到的**将主题下的配置文件直接覆盖**的原因比较简单，就是想自己从零开始设计一个**完全在自己掌控**内的个性化博客。
+
+## day1
+
+![](../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624174413493.png)
+
+添加了两个变量，其中theme是每个人最先接触的变量，用来设计主题，所以值也只需要与主题名相同即可。
+
+- theme：选择主题
+
+- publishDir : 与挂载Github有关系。
+
+介绍publishDir之前，先来聊一聊在Github上挂载静态博客
+
+在将项目全部挂载到Github上之前，都会有一组操作
+
+首先在编辑完配置文件后，`hugo`一下，然后将web内容全部推到Github上。
+
+```
+#终端，创建的hugo site的根目录下
+git init
+git add 
+git commit -m 'xxxxx'
+git remote add origin https://xxxxxxxx # 在github上创建的仓库，仅第一次添加仓库时需要输入
+git push -u origin master
+```
+
+整个web的信息在**public**下会生成
+
+![image-20220624175221985](../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624175221985.png)
+
+这个过程在hugo的文档中是这么描述的![image-20220624175718262](../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624175718262.png)
+
+在默认状态下，会推送publish文件夹下的所有内容作为挂载Github的配置文件。而我在挂载时，发现默认的方法并不能永远挂载，换句话说，我们推送上去的内容，被视为了普通的代码。原因发生在Github Pages的设置上：
+
+在Github上找到Your repositories，然后<img src="../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624181830540.png" alt="image-20220624181830540" style="zoom: 50%;" />
+
+点击Pages后，有一个source的设置。
+
+![](../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624182245029.png)
+
+在第一次push后，会生成这样类似的路径，可以看到此时的Github Pages是从master下寻找文件然后挂载我们的博客的。
+
+master的目录
+
+<img src="../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624182328882.png" alt="image-20220624182328882" style="zoom:50%;" />
+
+遇到了第一个404，很显然，我们没挂载成功
+
+<img src="../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624182918590.png" alt="image-20220624182918590" style="zoom:50%;" />
+
+这需要我们在推送site到Github上时发现问题。
+
+``` 
+#终端，创建的hugo site的根目录下
+git init
+git add 
+git commit -m 'xxxxx'
+git remote add origin https://xxxxxxxx # 在github上创建的仓库，仅第一次添加仓库时需要输入
+git push -u origin master
+```
+
+这段命令的环境在hugo site的根目录下(即D:\HugoDir\byungogo)，而public是byungogo的子目录，自然就没挂载成功。
+
+### Plan A
+
+那么解决404的方法自然就有了---将public单独推送到Github上，然后再将整个根目录下的文件推送给Github.
+
+初次之外，我们还有**Plan B**
+
+### Plan B
+
+设置Github Pages的source，以及配置文件。
+
+![image-20220624183757006](../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624183757006.png)
+
+在source的第二个选项中，是可以选择不同的路径的，意思就是从哪个路径下提取构成web的文件。
+
+<img src="../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624184004268.png" alt="image-20220624184004268" style="zoom:50%;" />
+
+那么，我们让hugo生成的web文件与GitHub Pages提取文件的路径相同，就能达到我们需要的**永久挂载**
+
+上面设置`/docs`的路径，就是Github Pages的提取路径，下一步就是改变hugo的默认生成路径即可。
+
+![image-20220624184220428](../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624184220428.png)
+
+这里就使用到了`publishDir`，只要将其设置成其他的文件夹名，所有web的文件就会被导入进去。这里我设置的是docs，其他的可不可行没试过。
+
+<img src="../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624184338421.png" alt="image-20220624184338421" style="zoom:67%;" />可以看到 docs与public的内容几乎是一样的。同时，我们直接进入挂载的网页：https:\\username.github.io（这个是实例，不是真实的域名），就能看到我们自己搭建的博客了。<img src="../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624184501009.png" alt="image-20220624184501009" style="zoom:50%;" />
