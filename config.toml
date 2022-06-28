@@ -2,4 +2,4 @@ baseURL = "https://wzskqjh.com"
 languageCode = 'en-us' #博客使用的语言
 title = 'byuN is the best' #博客的标题 
 theme = "ananke"
-# publishDir = "docs"
+publishDir = "docs"
