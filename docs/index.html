@@ -144,6 +144,51 @@
 
           </div>
         
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/hugo%E6%90%AD%E5%BB%BA/" class="color-inherit dim link">
+            
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          前言 本片博客以配置文件的编辑为主，针对于有一定编程基础并且想个性化个人搭建博客的开发者。
+本篇博客使用hugo作为搭建博客的工具，部署到Github上
+实际上，搭建个人博客的过程并不轻松(如果想搞清楚流程)，并没有网上的三五分钟就轻松入门那么简单。
+配置文件 一般来说，配置文件分为两种：
+ toml：&lt;变量名&gt; = 值 yaml：&lt;变量名&gt;：值  仅在内容的编辑上存在差异，没有优劣之分(以我目前的知识储备来看)。
+我使用的是toml的编辑格式，下后面的内容中会依照官方文档对一些配置进行说明。
+我的hugo根目录为：D:\HugoDir\byungogo
+ 初始配置  为什么不选择网上经常提到的将主题下的配置文件直接覆盖的原因比较简单，就是想自己从零开始设计一个完全在自己掌控内的个性化博客。
+day1 添加了两个变量，其中theme是每个人最先接触的变量，用来设计主题，所以值也只需要与主题名相同即可。
+  theme：选择主题
+  publishDir : 与挂载Github有关系。
+  介绍publishDir之前，先来聊一聊在Github上挂载静态博客
+在将项目全部挂载到Github上之前，都会有一组操作
+首先在编辑完配置文件后，hugo一下，然后将web内容全部推到Github上。
+#终端，创建的hugo site的根目录下git initgit add git commit -m &#39;xxxxx&#39;git remote add origin https://xxxxxxxx # 在github上创建的仓库，仅第一次添加仓库时需要输入git push -u origin master 整个web的信息在public下会生成
+这个过程在hugo的文档中是这么描述的在默认状态下，会推送publish文件夹下的所有内容作为挂载Github的配置文件。而我在挂载时，发现默认的方法并不能永远挂载，换句话说，我们推送上去的内容，被视为了普通的代码。原因发生在Github Pages的设置上：
+在Github上找到Your repositories，然后点击Pages后，有一个source的设置。
+在第一次push后，会生成这样类似的路径，可以看到此时的Github Pages是从master下寻找文件然后挂载我们的博客的。
+master的目录
+遇到了第一个404，很显然，我们没挂载成功
+这需要我们在推送site到Github上时发现问题。
+#终端，创建的hugo site的根目录下git initgit add git commit -m &#39;xxxxx&#39;git remote add origin https://xxxxxxxx # 在github上创建的仓库，仅第一次添加仓库时需要输入git push -u origin master 这段命令的环境在hugo site的根目录下(即D:\HugoDir\byungogo)，而public是byungogo的子目录，自然就没挂载成功。
+        </div>
+          <a href="/posts/hugo%E6%90%AD%E5%BB%BA/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
       </section>
 
       

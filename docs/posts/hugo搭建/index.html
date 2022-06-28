@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>byuN is the best</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="前言 本片博客以配置文件的编辑为主，针对于有一定编程基础并且想个性化个人搭建博客的开发者。
+本篇博客使用hugo作为搭建博客的工具，部署到Github上
+实际上，搭建个人博客的过程并不轻松(如果想搞清楚流程)，并没有网上的三五分钟就轻松入门那么简单。
+配置文件 一般来说，配置文件分为两种：
+ toml：&lt;变量名&gt; = 值 yaml：&lt;变量名&gt;：值  仅在内容的编辑上存在差异，没有优劣之分(以我目前的知识储备来看)。
+我使用的是toml的编辑格式，下后面的内容中会依照官方文档对一些配置进行说明。
+我的hugo根目录为：D:\HugoDir\byungogo
+ 初始配置  为什么不选择网上经常提到的将主题下的配置文件直接覆盖的原因比较简单，就是想自己从零开始设计一个完全在自己掌控内的个性化博客。
+day1 添加了两个变量，其中theme是每个人最先接触的变量，用来设计主题，所以值也只需要与主题名相同即可。
+  theme：选择主题
+  publishDir : 与挂载Github有关系。
+  介绍publishDir之前，先来聊一聊在Github上挂载静态博客
+在将项目全部挂载到Github上之前，都会有一组操作
+首先在编辑完配置文件后，hugo一下，然后将web内容全部推到Github上。
+#终端，创建的hugo site的根目录下git initgit add git commit -m &#39;xxxxx&#39;git remote add origin https://xxxxxxxx # 在github上创建的仓库，仅第一次添加仓库时需要输入git push -u origin master 整个web的信息在public下会生成
+这个过程在hugo的文档中是这么描述的在默认状态下，会推送publish文件夹下的所有内容作为挂载Github的配置文件。而我在挂载时，发现默认的方法并不能永远挂载，换句话说，我们推送上去的内容，被视为了普通的代码。原因发生在Github Pages的设置上：
+在Github上找到Your repositories，然后点击Pages后，有一个source的设置。
+在第一次push后，会生成这样类似的路径，可以看到此时的Github Pages是从master下寻找文件然后挂载我们的博客的。
+master的目录
+遇到了第一个404，很显然，我们没挂载成功
+这需要我们在推送site到Github上时发现问题。
+#终端，创建的hugo site的根目录下git initgit add git commit -m &#39;xxxxx&#39;git remote add origin https://xxxxxxxx # 在github上创建的仓库，仅第一次添加仓库时需要输入git push -u origin master 这段命令的环境在hugo site的根目录下(即D:\HugoDir\byungogo)，而public是byungogo的子目录，自然就没挂载成功。">
+    <meta name="generator" content="Hugo 0.97.3" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="" />
+<meta property="og:description" content="前言 本片博客以配置文件的编辑为主，针对于有一定编程基础并且想个性化个人搭建博客的开发者。
+本篇博客使用hugo作为搭建博客的工具，部署到Github上
+实际上，搭建个人博客的过程并不轻松(如果想搞清楚流程)，并没有网上的三五分钟就轻松入门那么简单。
+配置文件 一般来说，配置文件分为两种：
+ toml：&lt;变量名&gt; = 值 yaml：&lt;变量名&gt;：值  仅在内容的编辑上存在差异，没有优劣之分(以我目前的知识储备来看)。
+我使用的是toml的编辑格式，下后面的内容中会依照官方文档对一些配置进行说明。
+我的hugo根目录为：D:\HugoDir\byungogo
+ 初始配置  为什么不选择网上经常提到的将主题下的配置文件直接覆盖的原因比较简单，就是想自己从零开始设计一个完全在自己掌控内的个性化博客。
+day1 添加了两个变量，其中theme是每个人最先接触的变量，用来设计主题，所以值也只需要与主题名相同即可。
+  theme：选择主题
+  publishDir : 与挂载Github有关系。
+  介绍publishDir之前，先来聊一聊在Github上挂载静态博客
+在将项目全部挂载到Github上之前，都会有一组操作
+首先在编辑完配置文件后，hugo一下，然后将web内容全部推到Github上。
+#终端，创建的hugo site的根目录下git initgit add git commit -m &#39;xxxxx&#39;git remote add origin https://xxxxxxxx # 在github上创建的仓库，仅第一次添加仓库时需要输入git push -u origin master 整个web的信息在public下会生成
+这个过程在hugo的文档中是这么描述的在默认状态下，会推送publish文件夹下的所有内容作为挂载Github的配置文件。而我在挂载时，发现默认的方法并不能永远挂载，换句话说，我们推送上去的内容，被视为了普通的代码。原因发生在Github Pages的设置上：
+在Github上找到Your repositories，然后点击Pages后，有一个source的设置。
+在第一次push后，会生成这样类似的路径，可以看到此时的Github Pages是从master下寻找文件然后挂载我们的博客的。
+master的目录
+遇到了第一个404，很显然，我们没挂载成功
+这需要我们在推送site到Github上时发现问题。
+#终端，创建的hugo site的根目录下git initgit add git commit -m &#39;xxxxx&#39;git remote add origin https://xxxxxxxx # 在github上创建的仓库，仅第一次添加仓库时需要输入git push -u origin master 这段命令的环境在hugo site的根目录下(即D:\HugoDir\byungogo)，而public是byungogo的子目录，自然就没挂载成功。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wzskqjh.com/posts/hugo%E6%90%AD%E5%BB%BA/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="前言 本片博客以配置文件的编辑为主，针对于有一定编程基础并且想个性化个人搭建博客的开发者。
+本篇博客使用hugo作为搭建博客的工具，部署到Github上
+实际上，搭建个人博客的过程并不轻松(如果想搞清楚流程)，并没有网上的三五分钟就轻松入门那么简单。
+配置文件 一般来说，配置文件分为两种：
+ toml：&lt;变量名&gt; = 值 yaml：&lt;变量名&gt;：值  仅在内容的编辑上存在差异，没有优劣之分(以我目前的知识储备来看)。
+我使用的是toml的编辑格式，下后面的内容中会依照官方文档对一些配置进行说明。
+我的hugo根目录为：D:\HugoDir\byungogo
+ 初始配置  为什么不选择网上经常提到的将主题下的配置文件直接覆盖的原因比较简单，就是想自己从零开始设计一个完全在自己掌控内的个性化博客。
+day1 添加了两个变量，其中theme是每个人最先接触的变量，用来设计主题，所以值也只需要与主题名相同即可。
+  theme：选择主题
+  publishDir : 与挂载Github有关系。
+  介绍publishDir之前，先来聊一聊在Github上挂载静态博客
+在将项目全部挂载到Github上之前，都会有一组操作
+首先在编辑完配置文件后，hugo一下，然后将web内容全部推到Github上。
+#终端，创建的hugo site的根目录下git initgit add git commit -m &#39;xxxxx&#39;git remote add origin https://xxxxxxxx # 在github上创建的仓库，仅第一次添加仓库时需要输入git push -u origin master 整个web的信息在public下会生成
+这个过程在hugo的文档中是这么描述的在默认状态下，会推送publish文件夹下的所有内容作为挂载Github的配置文件。而我在挂载时，发现默认的方法并不能永远挂载，换句话说，我们推送上去的内容，被视为了普通的代码。原因发生在Github Pages的设置上：
+在Github上找到Your repositories，然后点击Pages后，有一个source的设置。
+在第一次push后，会生成这样类似的路径，可以看到此时的Github Pages是从master下寻找文件然后挂载我们的博客的。
+master的目录
+遇到了第一个404，很显然，我们没挂载成功
+这需要我们在推送site到Github上时发现问题。
+#终端，创建的hugo site的根目录下git initgit add git commit -m &#39;xxxxx&#39;git remote add origin https://xxxxxxxx # 在github上创建的仓库，仅第一次添加仓库时需要输入git push -u origin master 这段命令的环境在hugo site的根目录下(即D:\HugoDir\byungogo)，而public是byungogo的子目录，自然就没挂载成功。">
+
+<meta itemprop="wordCount" content="97">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="前言 本片博客以配置文件的编辑为主，针对于有一定编程基础并且想个性化个人搭建博客的开发者。
+本篇博客使用hugo作为搭建博客的工具，部署到Github上
+实际上，搭建个人博客的过程并不轻松(如果想搞清楚流程)，并没有网上的三五分钟就轻松入门那么简单。
+配置文件 一般来说，配置文件分为两种：
+ toml：&lt;变量名&gt; = 值 yaml：&lt;变量名&gt;：值  仅在内容的编辑上存在差异，没有优劣之分(以我目前的知识储备来看)。
+我使用的是toml的编辑格式，下后面的内容中会依照官方文档对一些配置进行说明。
+我的hugo根目录为：D:\HugoDir\byungogo
+ 初始配置  为什么不选择网上经常提到的将主题下的配置文件直接覆盖的原因比较简单，就是想自己从零开始设计一个完全在自己掌控内的个性化博客。
+day1 添加了两个变量，其中theme是每个人最先接触的变量，用来设计主题，所以值也只需要与主题名相同即可。
+  theme：选择主题
+  publishDir : 与挂载Github有关系。
+  介绍publishDir之前，先来聊一聊在Github上挂载静态博客
+在将项目全部挂载到Github上之前，都会有一组操作
+首先在编辑完配置文件后，hugo一下，然后将web内容全部推到Github上。
+#终端，创建的hugo site的根目录下git initgit add git commit -m &#39;xxxxx&#39;git remote add origin https://xxxxxxxx # 在github上创建的仓库，仅第一次添加仓库时需要输入git push -u origin master 整个web的信息在public下会生成
+这个过程在hugo的文档中是这么描述的在默认状态下，会推送publish文件夹下的所有内容作为挂载Github的配置文件。而我在挂载时，发现默认的方法并不能永远挂载，换句话说，我们推送上去的内容，被视为了普通的代码。原因发生在Github Pages的设置上：
+在Github上找到Your repositories，然后点击Pages后，有一个source的设置。
+在第一次push后，会生成这样类似的路径，可以看到此时的Github Pages是从master下寻找文件然后挂载我们的博客的。
+master的目录
+遇到了第一个404，很显然，我们没挂载成功
+这需要我们在推送site到Github上时发现问题。
+#终端，创建的hugo site的根目录下git initgit add git commit -m &#39;xxxxx&#39;git remote add origin https://xxxxxxxx # 在github上创建的仓库，仅第一次添加仓库时需要输入git push -u origin master 这段命令的环境在hugo site的根目录下(即D:\HugoDir\byungogo)，而public是byungogo的子目录，自然就没挂载成功。"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        byuN is the best
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="前言">前言</h1>
+<p>本片博客以配置文件的编辑为主，针对于有一定编程基础并且想个性化个人搭建博客的开发者。</p>
+<p>本篇博客使用<strong>hugo</strong>作为搭建博客的工具，部署到Github上</p>
+<p>实际上，搭建个人博客的过程并不轻松(如果想搞清楚流程)，并没有网上的三五分钟就轻松入门那么简单。</p>
+<h1 id="配置文件">配置文件</h1>
+<p>一般来说，配置文件分为两种：</p>
+<ul>
+<li>toml：&lt;变量名&gt; = 值</li>
+<li>yaml：&lt;变量名&gt;：值</li>
+</ul>
+<p>仅在内容的编辑上存在差异，没有优劣之分(以我目前的知识储备来看)。</p>
+<p>我使用的是toml的编辑格式，下后面的内容中会依照<a href="https://gohugo.io/getting-started/configuration/">官方文档</a>对一些配置进行说明。</p>
+<p><strong>我的hugo根目录为：D:\HugoDir\byungogo</strong></p>
+<hr>
+<h2 id="初始配置">初始配置</h2>
+<p><img src="../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624173351570.png" alt="image-20220624173351570"></p>
+<hr>
+<p>为什么不选择网上经常提到的<strong>将主题下的配置文件直接覆盖</strong>的原因比较简单，就是想自己从零开始设计一个<strong>完全在自己掌控</strong>内的个性化博客。</p>
+<h2 id="day1">day1</h2>
+<p><img src="../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624174413493.png" alt=""></p>
+<p>添加了两个变量，其中theme是每个人最先接触的变量，用来设计主题，所以值也只需要与主题名相同即可。</p>
+<ul>
+<li>
+<p>theme：选择主题</p>
+</li>
+<li>
+<p>publishDir : 与挂载Github有关系。</p>
+</li>
+</ul>
+<p>介绍publishDir之前，先来聊一聊在Github上挂载静态博客</p>
+<p>在将项目全部挂载到Github上之前，都会有一组操作</p>
+<p>首先在编辑完配置文件后，<code>hugo</code>一下，然后将web内容全部推到Github上。</p>
+<pre tabindex="0"><code>#终端，创建的hugo site的根目录下
+git init
+git add 
+git commit -m &#39;xxxxx&#39;
+git remote add origin https://xxxxxxxx # 在github上创建的仓库，仅第一次添加仓库时需要输入
+git push -u origin master
+</code></pre><p>整个web的信息在<strong>public</strong>下会生成</p>
+<p><img src="../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624175221985.png" alt="image-20220624175221985"></p>
+<p>这个过程在hugo的文档中是这么描述的<img src="../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624175718262.png" alt="image-20220624175718262"></p>
+<p>在默认状态下，会推送publish文件夹下的所有内容作为挂载Github的配置文件。而我在挂载时，发现默认的方法并不能永远挂载，换句话说，我们推送上去的内容，被视为了普通的代码。原因发生在Github Pages的设置上：</p>
+<p>在Github上找到Your repositories，然后<!-- raw HTML omitted --></p>
+<p>点击Pages后，有一个source的设置。</p>
+<p><img src="../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624182245029.png" alt=""></p>
+<p>在第一次push后，会生成这样类似的路径，可以看到此时的Github Pages是从master下寻找文件然后挂载我们的博客的。</p>
+<p>master的目录</p>
+<!-- raw HTML omitted -->
+<p>遇到了第一个404，很显然，我们没挂载成功</p>
+<!-- raw HTML omitted -->
+<p>这需要我们在推送site到Github上时发现问题。</p>
+<pre tabindex="0"><code>#终端，创建的hugo site的根目录下
+git init
+git add 
+git commit -m &#39;xxxxx&#39;
+git remote add origin https://xxxxxxxx # 在github上创建的仓库，仅第一次添加仓库时需要输入
+git push -u origin master
+</code></pre><p>这段命令的环境在hugo site的根目录下(即D:\HugoDir\byungogo)，而public是byungogo的子目录，自然就没挂载成功。</p>
+<h3 id="plan-a">Plan A</h3>
+<p>那么解决404的方法自然就有了&mdash;将public单独推送到Github上，然后再将整个根目录下的文件推送给Github.</p>
+<p>初次之外，我们还有<strong>Plan B</strong></p>
+<h3 id="plan-b">Plan B</h3>
+<p>设置Github Pages的source，以及配置文件。</p>
+<p><img src="../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624183757006.png" alt="image-20220624183757006"></p>
+<p>在source的第二个选项中，是可以选择不同的路径的，意思就是从哪个路径下提取构成web的文件。</p>
+<!-- raw HTML omitted -->
+<p>那么，我们让hugo生成的web文件与GitHub Pages提取文件的路径相同，就能达到我们需要的<strong>永久挂载</strong></p>
+<p>上面设置<code>/docs</code>的路径，就是Github Pages的提取路径，下一步就是改变hugo的默认生成路径即可。</p>
+<p><img src="../../Typora%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E5%9C%B0/image-20220624184220428.png" alt="image-20220624184220428"></p>
+<p>这里就使用到了<code>publishDir</code>，只要将其设置成其他的文件夹名，所有web的文件就会被导入进去。这里我设置的是docs，其他的可不可行没试过。</p>
+<p><!-- raw HTML omitted -->可以看到 docs与public的内容几乎是一样的。同时，我们直接进入挂载的网页：https:\username.github.io（这个是实例，不是真实的域名），就能看到我们自己搭建的博客了。<!-- raw HTML omitted --></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://wzskqjh.com" >
+    &copy;  byuN is the best 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
