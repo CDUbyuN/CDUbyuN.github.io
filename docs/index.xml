@@ -27,10 +27,10 @@
     
     <item>
       <title></title>
-      <link>https://wzskqjh.com/posts/hugo%E6%90%AD%E5%BB%BA/</link>
+      <link>https://wzskqjh.com/posts/hugo-build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://wzskqjh.com/posts/hugo%E6%90%AD%E5%BB%BA/</guid>
+      <guid>https://wzskqjh.com/posts/hugo-build/</guid>
       <description>前言 本片博客以配置文件的编辑为主，针对于有一定编程基础并且想个性化个人搭建博客的开发者。
 本篇博客使用hugo作为搭建博客的工具，部署到Github上
 实际上，搭建个人博客的过程并不轻松(如果想搞清楚流程)，并没有网上的三五分钟就轻松入门那么简单。
