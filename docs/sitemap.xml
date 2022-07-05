@@ -2,16 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wzskqjh.com/posts/at_first/</loc>
-    <lastmod>2022-06-26T19:13:20+08:00</lastmod>
-  </url><url>
     <loc>https://wzskqjh.com/</loc>
-    <lastmod>2022-06-26T19:13:20+08:00</lastmod>
-  </url><url>
-    <loc>https://wzskqjh.com/posts/</loc>
-    <lastmod>2022-06-26T19:13:20+08:00</lastmod>
+    <lastmod>2022-06-28T19:13:20+08:00</lastmod>
   </url><url>
     <loc>https://wzskqjh.com/posts/hugo-build/</loc>
+    <lastmod>2022-06-28T19:13:20+08:00</lastmod>
+  </url><url>
+    <loc>https://wzskqjh.com/posts/</loc>
+    <lastmod>2022-06-28T19:13:20+08:00</lastmod>
+  </url><url>
+    <loc>https://wzskqjh.com/posts/at_first/</loc>
+    <lastmod>2022-06-26T19:13:20+08:00</lastmod>
   </url><url>
     <loc>https://wzskqjh.com/categories/</loc>
   </url><url>
